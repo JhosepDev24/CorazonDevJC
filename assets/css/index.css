@@ -1,0 +1,109 @@
+
+    @import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      overflow: hidden;
+      background: linear-gradient(180deg, #1a0d1a 0%, #2b0f2b 100%); /* Dreamy gradient */
+      color: #ffccff;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .webgl {
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      outline: none;
+    }
+
+    body::before {
+      content: '';
+      position: absolute;
+      border: 6px solid #ff99cc;
+      inset: 1rem;
+      z-index: 100;
+      pointer-events: none;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255, 153, 204, 0.5);
+    }
+
+    h1 {
+      position: absolute;
+      top: 8vh;
+      left: 2rem;
+      right: 2rem;
+      text-align: center;
+      font-family: 'Parisienne', cursive;
+      font-weight: 400;
+      font-size: max(3rem, 2vh);
+      text-shadow: 0 0 10px rgba(255, 153, 204, 0.7);
+      opacity: 0;
+      animation: fadeIn 2s ease-in forwards 1s;
+    }
+
+    button {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      height: 10vh;
+      width: 10vh;
+      transform: translateY(2vh);
+      right: 0;
+      margin: auto;
+      background: transparent;
+      border: 2px solid #ff99cc;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 15px rgba(255, 153, 204, 0.4);
+    }
+
+    button:hover {
+      background: rgba(255, 153, 204, 0.2);
+      box-shadow: 0 0 20px rgba(255, 153, 204, 0.6);
+      transform: translateY(2vh) scale(1.1);
+    }
+
+    svg {
+      width: 4vh;
+      fill: #ffccff;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+
+    .love-text {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Parisienne', cursive;
+  font-size: max(2.5rem, 3vh);
+  color: #ffccff;
+  text-align: center;
+  opacity: 0;
+  animation: fadeInUpLove 4s ease-in-out forwards 2s;
+  text-shadow: 0 0 15px rgba(255, 153, 204, 0.8);
+  z-index: 10;
+}
+
+@keyframes fadeInUpLove {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -45%) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
